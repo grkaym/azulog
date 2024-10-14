@@ -23,15 +23,15 @@ theme = 'papermod'
   [[menu.main]]
     identifier = 'categories'
     name = 'Categories'
-    url = '/categories'
+    url = '/categories/'
     weight = 10
   # [[menu.main]]
   #   identifier = 'tags'
   #   name = 'Tags'
-  #   url = '/tags'
+  #   url = '/tags/'
   #   weight = 20
   [[menu.main]]
     identifier = 'archives'
     name = 'Archives'
-    url = '/archives'
+    url = '/archives/'
     weight = 30
