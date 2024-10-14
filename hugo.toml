@@ -8,6 +8,8 @@ theme = 'papermod'
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
+  [params.assets]
+    favicon = 'img/favicon.png'
   [params.cover]
     linkFullImages = true
   [params.homeInfoParams]
