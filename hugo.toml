@@ -1,5 +1,6 @@
 baseURL = 'https://azulog.netlify.app/'
 languageCode = 'ja'
+DefaultContentLanguage = "ja"
 title = 'あずログ'
 theme = 'papermod'
 
@@ -20,11 +21,11 @@ theme = 'papermod'
       url = 'https://github.com/grkaym'
 
 [menu]
-  [[menu.main]]
-    identifier = 'categories'
-    name = 'Categories'
-    url = '/categories/'
-    weight = 10
+  # [[menu.main]]
+  #   identifier = 'categories'
+  #   name = 'カテゴリー'
+  #   url = '/categories/'
+  #   weight = 10
   # [[menu.main]]
   #   identifier = 'tags'
   #   name = 'Tags'
