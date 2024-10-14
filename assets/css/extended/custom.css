@@ -1,0 +1,14 @@
+/* 記事のフォントサイズを18px->16pxに変更 */
+.post-content {
+  font-size: 1rem;  /* 既存のサイズの90%に設定 */
+}
+
+/* home-infoの高さを変更 */
+.first-entry {
+  min-height: 180px;
+}
+
+/* coverのキャプションの文字色を変更 */
+.entry-cover p {
+  color: var(--tertiary);
+}

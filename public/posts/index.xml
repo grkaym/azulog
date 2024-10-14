@@ -2,10 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on あずログ</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://azulog.netlify.app/posts/</link>
     <description>Recent content in Posts on あずログ</description>
     <generator>Hugo -- 0.135.0</generator>
     <language>ja</language>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Oct 2024 22:56:12 +0900</lastBuildDate>
+    <atom:link href="https://azulog.netlify.app/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ブログはじめました</title>
+      <link>https://azulog.netlify.app/posts/20241014/</link>
+      <pubDate>Mon, 14 Oct 2024 22:56:12 +0900</pubDate>
+      <guid>https://azulog.netlify.app/posts/20241014/</guid>
+      <description>&lt;p&gt;福岡の会社でシステム開発をやっている者です。
+よろしくね。&lt;/p&gt;
+&lt;p&gt;初見のHugo + Netlifyでブログサイト作ったよ。&lt;/p&gt;
+&lt;p&gt;アウトプットの場として、ゆるく使うつもりです。&lt;/p&gt;
+&lt;p&gt;Markdown、Golang、まったくわからん(ﾟ_｡)?&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

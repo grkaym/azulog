@@ -2,23 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2024-10-14T22:11:34+09:00</lastmod>
+    <loc>https://azulog.netlify.app/posts/</loc>
+    <lastmod>2024-10-14T22:56:12+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/first/</loc>
-    <lastmod>2024-10-14T22:11:34+09:00</lastmod>
+    <loc>https://azulog.netlify.app/</loc>
+    <lastmod>2024-10-14T22:56:12+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-10-14T22:11:34+09:00</lastmod>
+    <loc>https://azulog.netlify.app/posts/20241014/</loc>
+    <lastmod>2024-10-14T22:56:12+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/tech/</loc>
-    <lastmod>2024-10-14T22:11:34+09:00</lastmod>
+    <loc>https://azulog.netlify.app/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-10-14T22:11:34+09:00</lastmod>
+    <loc>https://azulog.netlify.app/tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-  </url><url>
-    <loc>http://localhost:1313/archives/</loc>
+    <loc>https://azulog.netlify.app/archives/</loc>
   </url>
 </urlset>
