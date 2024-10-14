@@ -1,0 +1,35 @@
+baseURL = 'https://example.org/'
+languageCode = 'ja'
+title = 'あずログ'
+theme = 'papermod'
+
+[params]
+  ShowBreadCrumbs = false
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  [params.cover]
+    linkFullImages = true
+  [params.homeInfoParams]
+    Title = 'Hello World!'
+    Content = 'よわよわSEの技術とか日常とか'
+    [[params.socialIcons]]
+      name = 'github'
+      url = 'https://github.com/grkaym'
+
+[menu]
+  [[menu.main]]
+    identifier = 'categories'
+    name = 'Categories'
+    url = '/categories'
+    weight = 10
+  # [[menu.main]]
+  #   identifier = 'tags'
+  #   name = 'Tags'
+  #   url = '/tags'
+  #   weight = 20
+  [[menu.main]]
+    identifier = 'archives'
+    name = 'Archives'
+    url = '/archives'
+    weight = 30
