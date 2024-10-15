@@ -5,6 +5,7 @@ title = 'あずログ'
 theme = 'papermod'
 enableEmoji = true
 cleanDestinationDir = true
+googleAnalytics = 'G-F4X2F0K5BY'
 
 [params]
   ShowBreadCrumbs = false
