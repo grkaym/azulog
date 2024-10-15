@@ -154,6 +154,32 @@
 </article>
 
 <article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Go Templateの勉強 １日目
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Hugoを始めたので、Go Templateについて勉強していく。
+今日は１日目で、分かったことをまとめる。
+参考にしたやつ
+Hugo公式ドキュメント Hugo日本語訳ドキュメント (日本語訳、ありがとうございます。。。✨) Claude 3.5 Sonnet 変数 コンテキストを指す.を使って表現する。 (コンテキストの詳細については後回し)
+例えばこういうフロントマターを設定してて
+&#43;&#43;&#43; title = &#39;hoge&#39; author = &#39;fuga&#39; &#43;&#43;&#43; タイトルと著者を参照するときはこう
+{{ .Title }} {{ .Params.author }} ん？authorにだけ.Paramsが必要なの？と思いました。
+.Titleはページ変数として事前に定義されているので、フロントマターから自動的に抽出されるらしいです。 https://juggernautjp.info/variables/page/
+authorは事前に定義されていないカスタム変数となるため、.Params.authorと書く必要があります。
+カスタム変数はすべて.Params配下に定義されます。わかりやすいね。
+条件分岐 さっきのフロントマターで考えるね
+&#43;&#43;&#43; title = &#39;hoge&#39; author = &#39;fuga&#39; &#43;&#43;&#43; if {{ if condition }}から{{ end }}まで。
+conditionがあれば、表示する。 {{ else if }}と{{ else }}が使える。 （例）authorがあれば著者を、なければAnonymousを表示する
+{{ if .Params.author }} &lt;p&gt;著者: {{ .Params.author }}&lt;/p&gt; {{ else }} &lt;p&gt;Anonymous&lt;/p&gt; {{ end }} with {{ with condition }}から{{ end }}まで。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-10-15 22:59:20 +0900 JST'>10月 15, 2024</span>&nbsp;·&nbsp;1 分</footer>
+  <a class="entry-link" aria-label="post link to Go Templateの勉強 １日目" href="https://azulog.netlify.app/posts/20241015/"></a>
+</article>
+
+<article class="post-entry"> 
 <figure class="entry-cover"><img loading="lazy" src="https://azulog.netlify.app/img/deer.png" alt="deer">
 </figure>
   <header class="entry-header">

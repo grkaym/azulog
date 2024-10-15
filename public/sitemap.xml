@@ -2,11 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://azulog.netlify.app/posts/20241015/</loc>
+    <lastmod>2024-10-15T22:59:20+09:00</lastmod>
+  </url><url>
     <loc>https://azulog.netlify.app/posts/</loc>
-    <lastmod>2024-10-14T22:56:12+09:00</lastmod>
+    <lastmod>2024-10-15T22:59:20+09:00</lastmod>
   </url><url>
     <loc>https://azulog.netlify.app/</loc>
-    <lastmod>2024-10-14T22:56:12+09:00</lastmod>
+    <lastmod>2024-10-15T22:59:20+09:00</lastmod>
   </url><url>
     <loc>https://azulog.netlify.app/posts/20241014/</loc>
     <lastmod>2024-10-14T22:56:12+09:00</lastmod>

@@ -3,6 +3,8 @@ languageCode = 'ja'
 DefaultContentLanguage = "ja"
 title = 'あずログ'
 theme = 'papermod'
+enableEmoji = true
+cleanDestinationDir = true
 
 [params]
   ShowBreadCrumbs = false

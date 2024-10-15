@@ -6,8 +6,63 @@
     <description>Recent content in Posts on あずログ</description>
     <generator>Hugo -- 0.135.0</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 14 Oct 2024 22:56:12 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 15 Oct 2024 22:59:20 +0900</lastBuildDate>
     <atom:link href="https://azulog.netlify.app/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go Templateの勉強 １日目</title>
+      <link>https://azulog.netlify.app/posts/20241015/</link>
+      <pubDate>Tue, 15 Oct 2024 22:59:20 +0900</pubDate>
+      <guid>https://azulog.netlify.app/posts/20241015/</guid>
+      <description>&lt;p&gt;Hugoを始めたので、Go Templateについて勉強していく。&lt;/p&gt;
+&lt;p&gt;今日は１日目で、分かったことをまとめる。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参考にしたやつ&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gohugo.io/templates/introduction/&#34;&gt;Hugo公式ドキュメント&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://juggernautjp.info/templates/&#34;&gt;Hugo日本語訳ドキュメント&lt;/a&gt;
+(日本語訳、ありがとうございます。。。✨)&lt;/li&gt;
+&lt;li&gt;Claude 3.5 Sonnet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;変数&#34;&gt;変数&lt;/h2&gt;
+&lt;p&gt;コンテキストを指す&lt;code&gt;.&lt;/code&gt;を使って表現する。
+(コンテキストの詳細については後回し)&lt;/p&gt;
+&lt;p&gt;例えばこういうフロントマターを設定してて&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;+++
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;title = &amp;#39;hoge&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;author = &amp;#39;fuga&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;+++
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;タイトルと著者を参照するときはこう&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ .&lt;span style=&#34;color:#a6e22e&#34;&gt;Title&lt;/span&gt; }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ .&lt;span style=&#34;color:#a6e22e&#34;&gt;Params&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;author&lt;/span&gt; }}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ん？authorにだけ.Paramsが必要なの？と思いました。&lt;/p&gt;
+&lt;p&gt;.Titleはページ変数として事前に定義されているので、フロントマターから自動的に抽出されるらしいです。
+&lt;a href=&#34;https://juggernautjp.info/variables/page/&#34;&gt;https://juggernautjp.info/variables/page/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;authorは事前に定義されていないカスタム変数となるため、.Params.authorと書く必要があります。&lt;/p&gt;
+&lt;p&gt;カスタム変数はすべて.Params配下に定義されます。わかりやすいね。&lt;/p&gt;
+&lt;h2 id=&#34;条件分岐&#34;&gt;条件分岐&lt;/h2&gt;
+&lt;p&gt;さっきのフロントマターで考えるね&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;+++
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;title = &amp;#39;hoge&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;author = &amp;#39;fuga&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;+++
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;if&#34;&gt;if&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;{{ if condition }}&lt;/code&gt;から&lt;code&gt;{{ end }}&lt;/code&gt;まで。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;conditionがあれば、表示する。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;{{ else if }}&lt;/code&gt;と&lt;code&gt;{{ else }}&lt;/code&gt;が使える。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;（例）authorがあれば著者を、なければAnonymousを表示する&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; .&lt;span style=&#34;color:#a6e22e&#34;&gt;Params&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;author&lt;/span&gt; }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;p&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;著者&lt;/span&gt;: {{ .&lt;span style=&#34;color:#a6e22e&#34;&gt;Params&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;author&lt;/span&gt; }}&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;p&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;p&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Anonymous&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;p&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ &lt;span style=&#34;color:#a6e22e&#34;&gt;end&lt;/span&gt; }}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;with&#34;&gt;with&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;{{ with condition }}&lt;/code&gt;から&lt;code&gt;{{ end }}&lt;/code&gt;まで。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>ブログはじめました</title>
       <link>https://azulog.netlify.app/posts/20241014/</link>
