@@ -103,7 +103,21 @@ with
         }
 
     </style>
-</noscript><meta property="og:title" content="Go Templateの勉強 １日目" />
+</noscript>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-F4X2F0K5BY"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-F4X2F0K5BY');
+        }
+      </script><meta property="og:title" content="Go Templateの勉強 １日目" />
 <meta property="og:description" content="Hugoを始めたので、Go Templateについて勉強していく。
 今日は１日目で、分かったことをまとめる。
 
@@ -321,7 +335,36 @@ with
     <div class="post-meta"><span title='2024-10-15 22:59:20 +0900 JST'>10月 15, 2024</span>&nbsp;·&nbsp;1 分
 
 </div>
-  </header> 
+  </header> <div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目次</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e5%a4%89%e6%95%b0" aria-label="変数">変数</a></li>
+                <li>
+                    <a href="#%e6%9d%a1%e4%bb%b6%e5%88%86%e5%b2%90" aria-label="条件分岐">条件分岐</a><ul>
+                        
+                <li>
+                    <a href="#if" aria-label="if">if</a></li>
+                <li>
+                    <a href="#with" aria-label="with">with</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e7%b9%b0%e3%82%8a%e8%bf%94%e3%81%97" aria-label="繰り返し">繰り返し</a><ul>
+                        
+                <li>
+                    <a href="#range" aria-label="range">range</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
   <div class="post-content"><p>Hugoを始めたので、Go Templateについて勉強していく。</p>
 <p>今日は１日目で、分かったことをまとめる。</p>
 <blockquote>
