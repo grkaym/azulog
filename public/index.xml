@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>あずログ</title>
-    <link>https://azulog.netlify.app/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on あずログ</description>
     <generator>Hugo -- 0.135.0</generator>
     <language>ja</language>
     <lastBuildDate>Thu, 17 Oct 2024 22:05:41 +0900</lastBuildDate>
-    <atom:link href="https://azulog.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>たのしいランニング</title>
-      <link>https://azulog.netlify.app/posts/20241017/</link>
+      <link>http://localhost:1313/posts/20241017/</link>
       <pubDate>Thu, 17 Oct 2024 22:05:41 +0900</pubDate>
-      <guid>https://azulog.netlify.app/posts/20241017/</guid>
+      <guid>http://localhost:1313/posts/20241017/</guid>
       <description>&lt;h2 id=&#34;ダイエットのために&#34;&gt;ダイエットのために&lt;/h2&gt;
 &lt;p&gt;身長162cm、&lt;strong&gt;体重65kg&lt;/strong&gt;のだらしない体を叩き直すため、&lt;/p&gt;
 &lt;p&gt;２か月ほど前からランニングを始めました。🏃‍♂️&lt;/p&gt;
@@ -24,7 +24,7 @@
 &lt;p&gt;最初は300m走った時点ででやめたくなっていたランニング&amp;hellip;&lt;/p&gt;
 &lt;p&gt;先日、10km走ることができました！！！🎉&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://azulog.netlify.app/img/20241017/IMG_5419.PNG&#34; width=&#34;30%&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/img/20241017/IMG_5419.PNG&#34; width=&#34;50%&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;うれしい！！&lt;/p&gt;
@@ -40,9 +40,9 @@
     </item>
     <item>
       <title>Go Templateの勉強 １日目</title>
-      <link>https://azulog.netlify.app/posts/20241015/</link>
+      <link>http://localhost:1313/posts/20241015/</link>
       <pubDate>Tue, 15 Oct 2024 22:59:20 +0900</pubDate>
-      <guid>https://azulog.netlify.app/posts/20241015/</guid>
+      <guid>http://localhost:1313/posts/20241015/</guid>
       <description>&lt;p&gt;Hugoを始めたので、Go Templateについて勉強していく。&lt;/p&gt;
 &lt;p&gt;今日は１日目で、分かったことをまとめる。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -95,9 +95,9 @@
     </item>
     <item>
       <title>ブログはじめました</title>
-      <link>https://azulog.netlify.app/posts/20241014/</link>
+      <link>http://localhost:1313/posts/20241014/</link>
       <pubDate>Mon, 14 Oct 2024 22:56:12 +0900</pubDate>
-      <guid>https://azulog.netlify.app/posts/20241014/</guid>
+      <guid>http://localhost:1313/posts/20241014/</guid>
       <description>&lt;p&gt;福岡の会社でシステム開発をやっている者です。
 よろしくね。&lt;/p&gt;
 &lt;p&gt;初見のHugo + Netlifyでブログサイト作ったよ。&lt;/p&gt;
